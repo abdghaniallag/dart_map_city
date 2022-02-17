@@ -15,4 +15,3 @@ dev_dependencies:
   test: ^1.16.0
 dependencies: 
   json_serializable: ^6.1.4
-  sqlite3: ^1.5.1
