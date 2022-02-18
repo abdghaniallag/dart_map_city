@@ -1,11 +1,12 @@
-class City {
-  int id;
+import 'package:json_annotation/json_annotation.dart';
+part 'model.g.dart';
 
-  String cityAscii;
-  int lat;
-  int lng;
-  int population;
-  int adminNameFk;
-  City(this.id, this.cityAscii, this.lat, this.lng, this.population,
-      this.adminNameFk);
+@JsonSerializable()
+class Country {
+  final Map<String, List<String>> countries;
+  Country({required this.countries});
+  factory Country.fromJson(Map<String, dynamic> json) =>
+      _$CountryFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CountryToJson(this);
 }
